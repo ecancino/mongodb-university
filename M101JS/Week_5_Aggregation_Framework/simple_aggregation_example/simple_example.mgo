@@ -1,0 +1,10 @@
+//mongo agg < simple_example.mgo
+
+db.products.aggregate([
+  {
+    $group: {
+      _id: '$manufacturer',
+      count: { $sum: 1 }
+    }
+  }
+]).pretty()

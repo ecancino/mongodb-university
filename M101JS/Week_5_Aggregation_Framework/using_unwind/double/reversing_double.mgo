@@ -1,0 +1,14 @@
+//mongo agg < reversing_double.mgo
+
+db.inventory.aggregate([
+  { $unwind: '$sizes' },
+  { $unwind: '$colors' },
+  {
+    $group: {
+      '_id': '$name',
+      'sizes': { $addToSet: '$sizes' },
+      'colors': { $addToSet: '$colors' }
+    }
+  }
+])
+

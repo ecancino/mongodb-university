@@ -1,0 +1,14 @@
+//mongo agg < using_avg.mgo
+
+db.products.aggregate([
+  {
+    $group: {
+      _id: {
+        'category': '$category'
+      },
+      avg_price: {$avg: '$price'}
+    }
+  }
+]).pretty();
+
+

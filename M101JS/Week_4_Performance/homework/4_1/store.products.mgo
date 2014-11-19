@@ -1,0 +1,45 @@
+db.products.drop();
+
+function getRandomNumber(max, precision) {
+  "use strict";
+  precision = precision || 0;
+  return Number(Math.random() * +max + 1).toFixed(precision);
+}
+
+function getSKU(consecutive) {
+  "use strict";
+  var prefix = 'ECZ',
+      dict = 'ABQRSTUGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKVWXYZCDEFHIJKLMNOPQRSTUGHIJKLMNOPQRSTUVZABCDEFGHIJKLMNOPWXYZABCDEFLMNOPQRSABQRSTUGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKVWXYZCDEFHIJKLMNOPQRSTUGHIJKLMNOPQRSTUVZABCDEFGHIJKLMNOPWXYZABCDEFLMNOPTUVWXY',
+      key = dict.substr(getRandomNumber(dict.length), 8);
+  return [prefix, consecutive, key].join('');
+}
+
+function getCategory() {
+  "use strict";
+  var categories = ['Phone', 'Tablet', 'Watch', 'Laptop', 'Desktop'];
+  return categories[getRandomNumber(categories.length)];
+}
+
+function getBrand() {
+  "use strict";
+  var brands = ['Samsung', 'Sony', 'Motorola', 'Apple', 'HTC'];
+  return brands[getRandomNumber(brands.length)];
+}
+
+
+for (var i = 0; i < 100; i++) {
+  db.products.insert({
+  //console.log({
+    sku: getSKU(i),
+    price: getRandomNumber(100, 2),
+    title: ['Product', i].join(' '),
+    description: ['A new product called ', i].join(' '),
+    category: getCategory(),
+    brand: getBrand()
+  });
+}
+
+db.products.ensureIndex({ sku: 1 });
+db.products.ensureIndex({ price: -1 });
+db.products.ensureIndex({ description: 1 });
+db.products.ensureIndex({ category: 1, brand: 1 });

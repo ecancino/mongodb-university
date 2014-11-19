@@ -1,4 +1,21 @@
-{ "_id" : 0, "name" : "aimee Zank", "scores" : [ { "type" : "exam", "score" : 1.463179736705023 }, { "type" : "quiz", "score" : 11.78273309957772 }, { "type" : "homework", "score" : 6.676176060654615 }, { "type" : "homework", "score" : 35.8740349954354 } ] }
+{ "_id": 0, "name": "aimee Zank", "scores": [
+  {
+    "type": "exam",
+    "score": 1.463179736705023
+  },
+  {
+    "type": "quiz",
+    "score": 11.78273309957772
+  },
+  {
+    "type": "homework",
+    "score": 6.676176060654615
+  },
+  {
+    "type": "homework",
+    "score": 35.8740349954354
+  }
+] }
 { "_id" : 1, "name" : "Aurelia Menendez", "scores" : [ { "type" : "exam", "score" : 60.06045071030959 }, { "type" : "quiz", "score" : 52.79790691903873 }, { "type" : "homework", "score" : 71.76133439165544 }, { "type" : "homework", "score" : 34.85718117893772 } ] }
 { "_id" : 2, "name" : "Corliss Zuk", "scores" : [ { "type" : "exam", "score" : 67.03077096065002 }, { "type" : "quiz", "score" : 6.301851677835235 }, { "type" : "homework", "score" : 20.18160621941858 }, { "type" : "homework", "score" : 66.28344683278382 } ] }
 { "_id" : 3, "name" : "Bao Ziglar", "scores" : [ { "type" : "exam", "score" : 71.64343899778332 }, { "type" : "quiz", "score" : 24.80221293650313 }, { "type" : "homework", "score" : 1.694720653897219 }, { "type" : "homework", "score" : 42.26147058804812 } ] }

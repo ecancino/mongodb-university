@@ -1,0 +1,18 @@
+//mongo fun < grouping.mgo
+
+db.fun.aggregate([
+  {
+    $group: {
+      _id: {
+        a: '$a',
+        b: '$b'
+      }, c: { $max:'$c'}
+    }
+  },
+  {
+    $group: {
+      _id: '$_id.a',
+      c: { $min: '$c' }
+    }
+  }
+]).pretty();

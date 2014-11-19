@@ -1,0 +1,5 @@
+//mongo agg < unwind.mgo
+
+db.items.aggregate([
+  { $unwind: '$attributes' }
+]);

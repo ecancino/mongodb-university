@@ -1,0 +1,14 @@
+//mongo test < hw5_4.mgo
+
+db.zips.aggregate([
+  {
+    $match: {
+      'city': { $regex: /^[0-9]/i } ,
+    }
+  }, {
+    $group: {
+      _id: null,
+      sum: { $sum: '$pop' }
+    }
+  }
+])

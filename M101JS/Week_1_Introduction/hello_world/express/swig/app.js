@@ -6,12 +6,12 @@ app.engine('html', cons.swig);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
-app.get('/', function(req, res){
-    res.render('hello', { name : 'Swig' });
+app.get('/', function (req, res) {
+  res.render('hello', { name: 'Swig' });
 });
 
-app.get('*', function(req, res){
-    res.status(404).send('Page Not Found');
+app.get('*', function (req, res) {
+  res.status(404).send('Page Not Found');
 });
 
 app.listen(8080);

@@ -1,0 +1,13 @@
+//mongo agg < using_sum.mgo
+
+db.products.aggregate([
+  {$group: {
+    _id: {
+        'maker': '$manufacturer'
+      },
+      total: { $sum: '$price' }
+    }
+  }
+]).pretty();
+
+

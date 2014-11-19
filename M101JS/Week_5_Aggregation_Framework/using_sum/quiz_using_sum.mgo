@@ -1,0 +1,18 @@
+//mongo zips < quiz_sum_by_state.mgo
+
+db.zips.aggregate([
+  {
+    '$group': {
+      '_id': '$state',
+      'population': { $sum: '$pop' }
+    }
+  },
+  {
+    $limit:  51
+  },
+  {
+    $sort: {
+      '_id': 1
+    }
+  }
+]).pretty();

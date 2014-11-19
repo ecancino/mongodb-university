@@ -1,0 +1,11 @@
+//mongo zips < match.mgo
+
+db.zips.aggregate([
+  {
+    $match: {
+      state: 'CA'
+    }
+  }
+]);
+
+

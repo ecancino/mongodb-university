@@ -1,0 +1,10 @@
+//mongo zips < quiz_using_max.mgo
+
+db.zips.aggregate([
+  {
+    $group: {
+      _id: '$state',
+      pop: { $max: '$pop' }
+    }
+  }
+]).pretty();

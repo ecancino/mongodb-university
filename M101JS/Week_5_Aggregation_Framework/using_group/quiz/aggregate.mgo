@@ -1,0 +1,13 @@
+//mongo stuff < aggregate.mgo
+
+db.stuff.aggregate([
+  {
+    $group: {
+      _id: {
+        'moe': '$a',
+        'larry': '$b',
+        'curly': '$c'
+      }
+    }
+  }
+]);

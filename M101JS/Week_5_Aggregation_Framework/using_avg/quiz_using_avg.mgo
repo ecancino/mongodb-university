@@ -1,0 +1,10 @@
+//mongo zips < quiz_using_avg.mgo
+
+db.zips.aggregate([
+  {
+    '$group': {
+      '_id': '$state',
+      'population': { $avg: '$pop' }
+    }
+  }
+]).pretty();

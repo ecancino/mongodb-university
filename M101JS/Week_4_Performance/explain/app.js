@@ -18,4 +18,3 @@ mongoc.connect('mongodb://localhost:27017/test', function(err, db) {
     db.close();
   });
 });
-

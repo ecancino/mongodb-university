@@ -1,0 +1,14 @@
+use
+m101;
+
+db.places.find({
+  location: {
+    $near: {
+      $geometry: {
+        type: "Point",
+        coordinates: [0, 0],
+        $maxDistance: 2000
+      }
+    }
+  }
+}).pretty();

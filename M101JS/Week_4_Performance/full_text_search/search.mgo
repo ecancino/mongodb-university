@@ -1,0 +1,8 @@
+var text = "said fight queen",
+    search = { $text: { $search: text } },
+    score = { _id: false, book: false, score: { $meta: 'textScore'} },
+    sort = { score: { $meta: 'textScore'} };
+
+print("Looking for", text);
+
+db.books.find(search, score).sort(sort).pretty();

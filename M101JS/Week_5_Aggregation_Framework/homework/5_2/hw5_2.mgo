@@ -1,0 +1,33 @@
+//mongo test < hw5_2.mgo
+
+db.zips.aggregate([
+  {
+    $match: {
+      $and: [
+        {
+          state: { $in: ['CT', 'NJ'] },
+        }
+      ]
+    }
+  },
+  {
+    $match: {
+      pop: { $gt: 25000 }
+    }
+  },
+  {
+    $group: {
+      _id: {
+        state: '$state',
+        city: '$city',
+      },
+      per: { $avg: '$pop' }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      total: { $avg: '$per' }
+    }
+  }
+]);

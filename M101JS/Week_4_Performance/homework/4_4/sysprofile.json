@@ -1,4 +1,17 @@
-{ "ts" : { "$date" : 1353441744386 }, "op" : "command", "ns" : "school2.$cmd", "command" : { "drop" : "student_grades" }, "ntoreturn" : 1, "keyUpdates" : 0, "numYield" : 0, "lockStats" : { "timeLockedMicros" : { "r" : 0, "w" : 1481 }, "timeAcquiringMicros" : { "r" : 0, "w" : 4 } }, "responseLength" : 129, "millis" : 1, "client" : "127.0.0.1", "user" : "" }
+{ "ts": {
+  "$date": 1353441744386
+}, "op": "command", "ns": "school2.$cmd", "command": {
+  "drop": "student_grades"
+}, "ntoreturn": 1, "keyUpdates": 0, "numYield": 0, "lockStats": {
+  "timeLockedMicros": {
+    "r": 0,
+    "w": 1481
+  },
+  "timeAcquiringMicros": {
+    "r": 0,
+    "w": 4
+  }
+}, "responseLength": 129, "millis": 1, "client": "127.0.0.1", "user": "" }
 { "ts" : { "$date" : 1353441753060 }, "op" : "query", "ns" : "school2.system.indexes", "query" : { "expireAfterSeconds" : { "$exists" : true } }, "ntoreturn" : 0, "ntoskip" : 0, "nscanned" : 3, "keyUpdates" : 0, "numYield" : 0, "lockStats" : { "timeLockedMicros" : { "r" : 58, "w" : 0 }, "timeAcquiringMicros" : { "r" : 2, "w" : 120711 } }, "nreturned" : 0, "responseLength" : 20, "millis" : 0, "client" : "0.0.0.0", "user" : "" }
 { "ts" : { "$date" : 1353441757091 }, "op" : "query", "ns" : "school2.students", "query" : { "student_id" : 0 }, "ntoreturn" : 0, "ntoskip" : 0, "nscanned" : 10000000, "keyUpdates" : 0, "numYield" : 176, "lockStats" : { "timeLockedMicros" : { "r" : 22760089, "w" : 0 }, "timeAcquiringMicros" : { "r" : 10600017, "w" : 143496 } }, "nreturned" : 10, "responseLength" : 2350, "millis" : 12560, "client" : "127.0.0.1", "user" : "" }
 { "ts" : { "$date" : 1353441757096 }, "op" : "insert", "ns" : "school2.student_grades", "keyUpdates" : 0, "numYield" : 0, "lockStats" : { "timeLockedMicros" : { "r" : 0, "w" : 5143 }, "timeAcquiringMicros" : { "r" : 0, "w" : 5 } }, "millis" : 5, "client" : "127.0.0.1", "user" : "" }

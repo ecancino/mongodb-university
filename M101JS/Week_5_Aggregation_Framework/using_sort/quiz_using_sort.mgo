@@ -1,0 +1,12 @@
+//mongo zips < quiz_using_sort.mgo
+
+db.zips.aggregate([
+   {
+    $sort: {
+      state: 1,
+      city: 1,
+    }
+  }
+]);
+
+

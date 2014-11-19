@@ -1,0 +1,10 @@
+//mongo zips < quiz_using_addtoset.mgo
+
+db.zips.aggregate([
+  {
+    '$group': {
+      '_id': '$city',
+      'postal_codes': { $addToSet: '$_id' }
+    }
+  }
+]).pretty();

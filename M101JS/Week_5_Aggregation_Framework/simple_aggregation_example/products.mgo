@@ -1,0 +1,56 @@
+//mongo agg < products.mgo
+
+db.products.drop();
+db.products.insert([
+  {
+    'name': 'iPad 16GB Wifi',
+    'manufacturer': 'Apple',
+    'category': 'Tablets',
+    'price': 499.00
+  }, {
+    'name': 'iPad 32GB Wifi',
+    'category': 'Tablets',
+    'manufacturer': 'Apple',
+    'price': 599.00
+  }, {
+    'name': 'iPad 64GB Wifi',
+    'category': 'Tablets',
+    'manufacturer': 'Apple',
+    'price': 699.00
+  }, {
+    'name': 'Galaxy S3',
+    'category': 'Cell Phones',
+    'manufacturer': 'Samsung',
+    'price': 563.99
+  }, {
+    'name': 'Galaxy Tab 10',
+    'category': 'Tablets',
+    'manufacturer': 'Samsung',
+    'price': 450.99
+  }, {
+    'name': 'Vaio',
+    'category': 'Laptops',
+    'manufacturer': 'Sony',
+    'price': 499.00
+  }, {
+    'name': 'Macbook Air 13inch',
+    'category': 'Laptops',
+    'manufacturer': 'Apple',
+    'price': 499.00
+  }, {
+    'name': 'Nexus 7',
+    'category': 'Tablets',
+    'manufacturer': 'Google',
+    'price': 199.00
+  }, {
+    'name': 'Kindle Paper White',
+    'category': 'Tablets',
+    'manufacturer': 'Amazon',
+    'price': 129.00
+  }, {
+    'name': 'Kindle Fire',
+    'category': 'Tablets',
+    'manufacturer': 'Amazon',
+    'price': 199.00
+  }
+]);

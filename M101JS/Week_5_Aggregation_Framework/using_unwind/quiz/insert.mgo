@@ -1,0 +1,9 @@
+//mongo agg < insert.mgo
+
+db.items.drop();
+db.items.insert([
+  { _id: 'nail', 'attributes': ['hard', 'shiny', 'pointy', 'thin'] },
+  { _id: 'hammer', 'attributes': ['heavy', 'black', 'blunt'] },
+  { _id: 'screwdriver', 'attributes': ['long', 'black', 'flat'] },
+  { _id: 'rock', 'attributes': ['heavy', 'rough', 'roundish'] }
+]);

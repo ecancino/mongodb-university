@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Login</title>
-    <style type="text/css">
-      .label {text-align: right}
-      .error {color: red}
-    </style>
+<head>
+  <title>Login</title>
+  <style type="text/css">
+    .label {
+      text-align: right
+    }
 
-  </head>
+    .error {
+      color: red
+    }
+  </style>
 
-  <body>
-    <h2>Login</h2>
-    <form method="post">
-      <table>
-        <tr>
-          <td class="label">
-            Username
-          </td>
-          <td>
-            <input type="text" name="username" value="{{username}}">
-          </td>
-          <td class="error">
-          </td>
-        </tr>
+</head>
 
-        <tr>
-          <td class="label">
-            Password
-          </td>
-          <td>
-            <input type="password" name="password" value="">
-          </td>
-          <td class="error">
-	    {{login_error}}
-            
-          </td>
-        </tr>
+<body>
+<h2>Login</h2>
 
-      </table>
+<form method="post">
+  <table>
+    <tr>
+      <td class="label">
+        Username
+      </td>
+      <td>
+        <input type="text" name="username" value="{{username}}">
+      </td>
+      <td class="error">
+      </td>
+    </tr>
 
-      <input type="submit">
-    </form>
-  </body>
+    <tr>
+      <td class="label">
+        Password
+      </td>
+      <td>
+        <input type="password" name="password" value="">
+      </td>
+      <td class="error">
+        {{login_error}}
+
+      </td>
+    </tr>
+
+  </table>
+
+  <input type="submit">
+</form>
+</body>
 
 </html>

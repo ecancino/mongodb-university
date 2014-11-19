@@ -1,0 +1,12 @@
+//mongo agg < using_max_min.mgo
+
+db.products.aggregate([
+  {
+    $group: {
+      _id: { 'maker': '$manufacturer' },
+      maxprice: { $max: '$price' }
+    }
+  }
+]).pretty();
+
+

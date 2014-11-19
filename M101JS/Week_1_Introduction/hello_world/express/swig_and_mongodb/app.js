@@ -10,25 +10,25 @@ app.set('views', __dirname + '/views');
 var mongoclient = new MongoClient(new Server("localhost", 27017));
 var db = mongoclient.db('course');
 
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
 
-    // Find one document in our collection
-    db.collection('hello_combined').findOne({}, function(err, doc) {
+  // Find one document in our collection
+  db.collection('hello_combined').findOne({}, function (err, doc) {
 
-        if(err) throw err;
+    if (err) throw err;
 
-        res.render('hello', doc);
-    });
+    res.render('hello', doc);
+  });
 });
 
-app.get('*', function(req, res){
-    res.status(404).send('Page Not Found');
+app.get('*', function (req, res) {
+  res.status(404).send('Page Not Found');
 });
 
-mongoclient.open(function(err, mongoclient) {
+mongoclient.open(function (err, mongoclient) {
 
-    if(err) throw err;
+  if (err) throw err;
 
-    app.listen(8080);
-    console.log('Express server started on port 8080');
+  app.listen(8080);
+  console.log('Express server started on port 8080');
 });

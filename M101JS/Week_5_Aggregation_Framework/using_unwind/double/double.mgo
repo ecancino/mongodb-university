@@ -1,0 +1,16 @@
+//mongo agg < double.mgo
+
+db.inventory.aggregate([
+  { $unwind: '$sizes' },
+  { $unwind: '$colors' },
+  {
+    $group: {
+      '_id': {
+        'size': '$sizes',
+        'color': '$colors'
+      },
+      'count': {'$sum': 1}
+    }
+  }
+])
+

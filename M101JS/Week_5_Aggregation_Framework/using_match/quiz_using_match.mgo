@@ -1,0 +1,11 @@
+//mongo zips < quiz_using_match.mgo
+
+db.zips.aggregate([
+  {
+    $match: {
+      pop: { $gt: 100000 }
+    }
+  }
+]);
+
+

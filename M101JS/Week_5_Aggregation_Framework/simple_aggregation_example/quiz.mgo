@@ -1,0 +1,13 @@
+//mongo agg < quiz.mgo
+
+db.products.aggregate([
+  {
+    $group: {
+      _id: '$category',
+      num_products: { $sum: 1 },
+      total: { $sum: '$price' }
+    }
+  },{
+    $sort: { total: -1 }
+  }
+]).pretty();
