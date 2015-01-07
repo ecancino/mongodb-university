@@ -1,4 +1,3 @@
-mongou
-======
+# MongoDB University
 
 MongoDB University Courses
